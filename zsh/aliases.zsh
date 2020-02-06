@@ -146,6 +146,7 @@ alias gz='tar -zcvf'
 alias c='rails c' # Rails 3
 alias co='script/console' # Rails 2
 alias cod='script/console --debugger'
+alias be='bundle exec'
 
 #If you want your thin to listen on a port for local VM development
 #export VM_IP=10.0.0.1 <-- your vm ip
@@ -211,3 +212,28 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+
+# Docker
+alias dc='docker-compose'
+
+# Autocorrect
+alias gulp='nocorrect gulp'
+alias bat='nocorrect bat'
+alias asdf='nocorrect asdf'
+alias bundle='nocorrect bundle'
+
+# DNS
+alias flushdns='sudo killall -HUP mDNSResponder'
+
+# ctags
+alias ctags="`brew --prefix`/bin/ctags -R --exclude=@.gitignore --exclude=.git/ --exclude=_build/ ."
+
+# k8s
+alias k8s="docker login quay.io && docker pull quay.io/citybaseinc/toolkit:latest && docker run -it -p 8001:8001 -v ~/.aws:/root/.aws -v $PWD:/root/current -v ~/.ssh:/root/.ssh quay.io/citybaseinc/toolkit:latest"
+
+# top
+alias top="top -o cpu"
+
+# release
+alias release="~/.scripts/release.sh"
+alias man="tldr"

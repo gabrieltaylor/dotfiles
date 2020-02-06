@@ -112,6 +112,7 @@
   autocrlf = false
   editor = vim
   excludesfile = ~/.yadr/git/gitignore
+	hookspath = /Users/gtaylorruss/.git-hooks
 [advice]
   statusHints = false
 [diff]
@@ -125,3 +126,17 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[user]
+	name = Gabriel Taylor Russ
+	email = gabriel.taylor.russ@gmail.com
+	signingkey = 704C8442C68A6EEB
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+  # templatedir = ~/.git-templates
+[commit]
+  template = ~/.commit-message
+	gpgsign = true
