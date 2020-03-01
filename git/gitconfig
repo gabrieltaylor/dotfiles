@@ -138,5 +138,5 @@
 [init]
   # templatedir = ~/.git-templates
 [commit]
-  template = ~/.commit-message
+  template = ~/.yadr/git/.commit-message
 	gpgsign = true
